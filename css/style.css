@@ -1,0 +1,444 @@
+/* Hecho por Maria Martorell Mas para mod04 de Desarrollo de Aplicaciones Web, LinkiaFP, 1er semestre de 2023. Todos los derechos reservados */
+
+/* RESET */
+* {
+  /* background-color: red; */
+  margin: 0;
+  padding: 0;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+
+/* body {
+    background-color:black ;
+} */
+/* HEADER (aquí está el responsive?) */
+header {
+  height: 100px;
+  background: white;
+  padding: 0 50px;
+  color: black;
+  /*esto es para que salgan todos el uno al lado del otro ordenado? : */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  text-transform: uppercase;
+}
+
+.logo img {
+  width: 25px;
+}
+.menu a {
+  text-transform: uppercase;
+  text-decoration: none;
+  /* font-weight: bold; */
+  color: black;
+  padding: 0 10px;
+  /* transition: 0.4s; */
+}
+.menu a:hover {
+  color: darkred;
+  text-decoration: underline;
+}
+.menu a:hover,
+.mostrar-menu:hover,
+.esconder-menu:hover {
+  color: darkred;
+  text-underline-offset: 5px;
+  text-decoration-thickness: 3px;
+  /* font-weight: bolder; */
+}
+
+.mostrar-menu,
+.esconder-menu {
+  font-size: 40px;
+  cursor: pointer;
+  display: none;
+  transition: 0.4s;
+}
+
+.mostrar-menu {
+  order: 1;
+}
+
+#check {
+  display: none;
+}
+
+/*
+BANNER
+*/
+
+#banner {
+  padding: 0 50px; /*Si todo en la pagina web tiene el mismo padding y el mismo margen es mucho más compacta y ordenada y así nosotros lo podemos manipular mejor*/
+  background-image: url(../imagenes/banner1.jpg);
+  height: 40vh;
+  background-size: 100%; /*así la imagen del banner lo cubre todo*/
+  background-position: center;
+}
+
+.banner-caja-blanca {
+  position: absolute;
+
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  height: inherit;
+  align-self: left;
+  /* width: 500px; */ /*ERA ESTO LO QUE ME JODIA EL RESPONSIVE DE LA CAJA*/
+  padding: 0px 50px;
+  /* margin-left:60%; */
+
+  right: 5%;
+}
+
+.im-venom {
+  font-size: 35px;
+  font-weight: 10;
+  color: darkred;
+  /* left: 100px; */
+  /* right: 100px; */
+  /* align-self: left; */
+  /* justify-content: left; */
+  /* text-align: left; */
+  /* width: 100%; */
+  letter-spacing: 3px;
+}
+.banner-caja-blanca h3 {
+  font-size: 60px;
+  /* font-size: 10.84vw; */
+  font-weight: lighter;
+  letter-spacing: 1px;
+}
+.Antiheroe {
+  font-weight: bolder;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black,
+    -1px -1px black, 1px 1px black, -1px 1px black, 1px -1px black;
+}
+
+.banner-caja-blanca h4 {
+  font-size: 40px;
+  font-weight: lighter;
+  letter-spacing: 2px;
+}
+
+.botton-entrar {
+  background-color: darkred;
+  font-size: 20px;
+  border: none;
+  color: white;
+  text-decoration: none;
+  font-weight: lighter;
+  padding: 10px 30px;
+  align-self: center;
+  margin: 20px;
+  letter-spacing: 1px;
+  border-radius: 8px;
+}
+
+.botton-entrar:hover {
+  background: rgb(82, 0, 0);
+  transition: all 0.4s;
+  cursor: pointer;
+  align-self: center;
+}
+
+/* SOBRE MÍ */
+
+#sobre-mi {
+  height: 100px;
+  padding: 30px 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#sobre-mi h3 {
+  text-transform: uppercase;
+  font-weight: lighter;
+  /* padding: 5%; */
+  padding: 20px 0px 30px 0px;
+}
+
+#sobre-mi img {
+  width: 15px;
+}
+
+#sobre-mi p {
+  text-align: center;
+  padding: 0px 20px 30px 0px;
+}
+
+/* GALERIA */
+
+#galeria {
+  padding: 10px 100px 20px;
+  transition: 0.3;
+}
+
+#galeria h3 {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: x-large;
+  color: darkred;
+  padding-top: 10px;
+  padding-bottom: 15px;
+}
+.gallery-container {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: 150px;
+  grid-gap: 10px;
+  border-style: solid;
+  border-width: 15px;
+  border-color: #9b9b9b;
+  background-color: #9b9b9b;
+  border-radius: 1%;
+}
+.gallery-item {
+  position: relative;
+}
+.gallery-title {
+  /* position: absolute;
+    bottom: 0;
+    color: white;
+    background: #333;
+    width: 100%;
+    margin: 0;
+    padding: 10px; */
+  visibility: hidden;
+}
+.gallery-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* tamaños de la galeria de imágenes */
+
+.gallery-item:nth-child(1) {
+  grid-row-start: span 3;
+}
+
+.gallery-item:nth-child(2) {
+  grid-column-start: span 1;
+  grid-row-start: span 2;
+}
+
+.gallery-item:nth-child(3) {
+  grid-row-start: span 3;
+  grid-column-start: span 1;
+}
+
+.gallery-item:nth-child(4) {
+  grid-row-start: span 1;
+}
+
+/* animacion de las imágenes */
+
+.gallery-img:hover {
+  animation: shake 0.5s;
+  animation-iteration-count: 5s;
+  cursor: pointer;
+}
+
+@keyframes shake {
+  0% {
+    transform: translate(1px, 1px) rotate(0deg);
+  }
+  10% {
+    transform: translate(-1px, -2px) rotate(-1deg);
+  }
+  20% {
+    transform: translate(-3px, 0px) rotate(1deg);
+  }
+  30% {
+    transform: translate(3px, 2px) rotate(0deg);
+  }
+  40% {
+    transform: translate(1px, -1px) rotate(1deg);
+  }
+  50% {
+    transform: translate(-1px, 2px) rotate(-1deg);
+  }
+  60% {
+    transform: translate(-3px, 1px) rotate(0deg);
+  }
+  70% {
+    transform: translate(3px, 1px) rotate(-1deg);
+  }
+  80% {
+    transform: translate(-1px, -1px) rotate(1deg);
+  }
+  90% {
+    transform: translate(1px, 2px) rotate(0deg);
+  }
+  100% {
+    transform: translate(1px, -2px) rotate(-1deg);
+  }
+}
+
+/* footer
+ */
+
+footer {
+  color: white;
+  background-color: black;
+  /* padding: 2%; */
+  /* justify-content: space-between; */
+  text-align: center;
+  /* z-index: 100; */
+  transition: 0.8s;
+  padding-bottom: 2%;
+}
+
+footer .logo {
+  padding: 1%;
+  padding-top: 15px;
+}
+/* MENU RESPONSIVE */
+@media (max-width: 768px) {
+  /* HEADER */
+  /* los simbolitos de abrir y cerrar menu */
+  .mostrar-menu,
+  .esconder-menu {
+    display: block;
+  }
+  /* el menú  */
+  .menu {
+    position: fixed;
+    /* width 100% q lo cubra todo */
+    width: 100%;
+    height: 100vh; /*100viewxheight?*/
+
+    background: black;
+    /* vamos a querer que se vea desde la derecha así que le ponemos: */
+    /* left: 0; */ /*ESTO ESTÁ COMENTADO PARA Q FUNCIONE EL CHECK DEL MENÚ */
+    right: -100%; /*ponemos right y no left pq el menú sale desde la derecha */
+    top: 0;
+    text-align: center;
+    padding: 100px 0px;
+    z-index: 100;
+    transition: 0.8s;
+  }
+  .menu a {
+    /* esto es para el menu estilo columna del responsive */
+    color: white;
+    display: block;
+    padding: 20px;
+  }
+  /* ahora vamos a poner la X para cerrar menu arriba
+     */
+  .esconder-menu {
+    color: white;
+    position: absolute;
+    top: 40px;
+    right: 40px;
+  }
+  /* esta es la parte del check (del checkbox) que hará aparecer y desaparecer el menú */
+  #check:checked ~ .menu {
+    right: 0;
+  }
+
+  #banner {
+    height: 40hv;
+  }
+  .contenido-banner {
+    height: inherit;
+  }
+  .banner-caja-blanca {
+    /* position:fixed; */
+    /* height: 40hv;
+        left:35%; */
+    /* transition: 0.2s; */
+    padding: 0px 15px;
+    /* height:10hv; */
+    /* position:fixed; */
+    /* height:fit-content; */
+    /* right:5%; */
+    /* margin-top: 500px; */
+
+    height: inherit;
+    transition: 0.8s;
+  }
+  /* responsive fonts */
+  .im-venom {
+    font-size: 25px;
+  }
+  .banner-caja-blanca h3 {
+    font-size: 45px;
+  }
+
+  .banner-caja-blanca h4 {
+    font-size: 35px;
+  }
+
+  /* sobre mi */
+  #sobre-mi {
+    flex-direction: column;
+  }
+
+  /* responsive de la galería  */
+  #galeria {
+    padding: 10px 50px 20px;
+  }
+  .gallery-container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  #galeria h3 {
+    padding-top: 40px;
+  }
+}
+@media (min-width: 1366px) {
+  #galeria {
+    padding: 10px 200px 20px;
+    transition: 0.2s;
+  }
+  /* unas medidas de las imágenes grid para la galeria dentro de estas dimensiones de pantalla que al final he decidido no usar */
+  /* .gallery-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .gallery-item:nth-child(1) {
+        grid-row-start: span 4;
+    }
+
+
+
+    .gallery-item:nth-child(3){
+        grid-row-start: span 4;
+    }
+
+    .gallery-item:nth-child(4){
+        grid-row-start: span 2;
+
+    } */
+}
+@media (max-height: 700px) {
+  .im-venom {
+    font-size: 25px;
+  }
+  .banner-caja-blanca h3 {
+    font-size: 35px;
+  }
+
+  .banner-caja-blanca h4 {
+    font-size: 35px;
+  }
+}
+
+@media (max-height: 500px) {
+  .im-venom {
+    font-size: 15px;
+  }
+  .banner-caja-blanca h3 {
+    font-size: 25px;
+  }
+
+  .banner-caja-blanca h4 {
+    font-size: 25px;
+  }
+}

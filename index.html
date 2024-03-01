@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>VENOM</title>
+
+    <!-- Hecho por Maria Martorell Mas para mod04 de Desarrollo de Aplicaciones Web, LinkiaFP, 1er semestre de 2023. Todos los derechos reservados -->
+</head>
+
+<body>
+    <header>
+        <h2 class="logo"><img src="imagenes/spider-solid.svg" alt="Spider"> Venom</h2>
+        <!-- para mostrar el menu en la version tablet es un checkbox -->
+        <input type="checkbox" id="check">
+        <label for="check" class="mostrar-menu">
+            &#8801
+            <!-- ^ esto es el signo del menu  -->
+        </label>
+        <!-- menú -->
+        <nav class="menu">
+            <a href="index.html">Home</a>
+            <a href="html/portfolio.html">Portfolio</a>
+            <a href="html/blog.html">Blog</a>
+            <a href="html/contacto.html">Contacto</a>
+            <!-- checkbox para esconder el menú -->
+            <label for="check" class="esconder-menu">
+                &#215
+            </label>
+        </nav>
+
+    </header>
+
+    <!-- ahora el banner de venom: -->
+    <section id="banner">
+
+        <div class="banner-caja-blanca">
+            <span class="im-venom">I'M VENOM</span>
+            <h3><span class="Antiheroe">Antiheroe</span> <br>& Simbionte
+            </h3>
+            <h4>¡Máscara ven a mí!</h4>
+            <!-- <a href="#" class="boton-entrar">ENTRAR</a> -->
+            <button class="botton-entrar" onclick="window.location.href='html/portfolio.html';">ENTRAR</button>
+        </div>
+    </section>
+    <!-- sobre mí -->
+    <section id="sobre-mi">
+        <h3><img src="imagenes/spider-solid.svg" alt="Spider"> Sobre mí...</h3>
+        <p>Eddie Brock como el nuevo anfritión del extratrerrestre que se convertiría en el Villano Venom, utilizando
+            los acontecimientos de la historia de "Sin Eater".</p>
+    </section>
+
+    <!-- novedades  -->
+
+    <section id="galeria">
+        <h3>Galería de imágenes</h3>
+        <div class="gallery-container">
+            <div class="gallery-item">
+                <a href="imagenes/imagen1.jpg" target="_blank"><img src="imagenes/imagen1.jpg" alt="Imagen 1"
+                        class="gallery-img"></a>
+                <h2 class="gallery-title">Imagen 1</h2>
+            </div>
+            <div class="gallery-item">
+                <a href="imagenes/imagen2.jpg" target="_blank"><img src="imagenes/imagen2.jpg" alt="Imagen 2"
+                        class="gallery-img"></a>
+                <h2 class="gallery-title">Imagen 2</h2>
+            </div>
+            <div class="gallery-item">
+                <a href="imagenes/imagen3.jpg" target="_blank"><img src="imagenes/imagen3.jpg" alt="Imagen 3"
+                        class="gallery-img"></a>
+                <h2 class="gallery-title">Imagen 3</h2>
+            </div>
+            <div class="gallery-item">
+                <a href="imagenes/imagen4.jpg" target="_blank"><img src="imagenes/imagen4.jpg" alt="Imagen 4"
+                        class="gallery-img"></a>
+                <h2 class="gallery-title">Imagen 4</h2>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <h2 class="logo"><img src="imagenes/spider-solid-white.png" alt="Spider"> Venom</h2>
+        <p> Maria Martorell Mas &copy 2023 Todos los derechos reservados</p>
+    </footer>
+</body>
+
+
+
+</html>
